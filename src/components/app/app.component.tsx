@@ -1,8 +1,11 @@
 import React from 'react';
-import { Auth } from '../auth/auth.component';
+import RoutesComponent from '../../routes';
 
 const App: React.FC = () => {
-  return <Auth />
+
+  return (<div>
+    <RoutesComponent />
+  </div>)
 }
 
 export { App };
