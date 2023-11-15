@@ -1,35 +1,51 @@
 body {
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 
-  a {
-    color: inherit;
-    text-decoration: none;
+.main-container {
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(180deg, rgba(200,200,200,1) 35%, rgba(245,245,245,1) 100%);
+}
 
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
+a {
+  color: inherit;
+  text-decoration: none;
 
-  img {
-    max-width: 100%;
-    position: relative;
-    vertical-align: middle;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
+}
 
-  figure {
-    margin: 2rem 0;
-  }
+img {
+  max-width: 100%;
+  position: relative;
+  vertical-align: middle;
+}
 
-  figcaption {
-    font-size: 80%;
-  }
+figure {
+  margin: 2rem 0;
+}
 
-  table {
-    width: 100%;
-    font-size: 85%;
-    border-collapse: collapse;
-  }
+figcaption {
+  font-size: 80%;
+}
+
+table {
+  width: 100%;
+  font-size: 85%;
+  border-collapse: collapse;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding: 1vw 2vw 4vw 1vw;
+  padding-bottom: 2.5rem;    /* Footer height */
+}

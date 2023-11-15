@@ -7,18 +7,16 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title }) => (
     <header className='header'>
-        <div>
-            <div>
-                <h2>{title}</h2>
+            <div className='store-tittle'>
+                <h1>{title}</h1>
             </div>
-            <div>
-                <p>A sapataria vitoriana</p>
+            <div className='slogan'>
+                A sapataria vitoriana
             </div>
-            <div>
+            <div className='user-frame'>
                 <div>Seja bem vindo(a)!</div>
                 <div>[userName]</div>
             </div>
-        </div>
     </header>
 )
 

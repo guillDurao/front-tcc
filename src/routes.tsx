@@ -8,23 +8,27 @@ import HomePage from "./pages/home.page"
 import NotFoundPage from "./pages/notfound.page"
 import { StoreContext } from "./store.context"
 
-const RoutesComponent: React.FC = () => {    
-  const { authStore } = useContext(StoreContext)
+const RoutesComponent: React.FC = () => {
+    const { authStore } = useContext(StoreContext)
 
     return (
         <Router>
-            <Header title='Noir Footwear' />
-            <Routes>
-                {
-                    authStore.isAuthenticated() ?
-                    <>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/login" element={<Auth />} />
-                        <Route path="*" element={<NotFoundPage />} />
-                    </> : <Route path="*" element={<Auth />} />
-                }
-            </Routes>
-            <Footer />
+            <div className="page-container">
+                <Header title='Noir Footwear' />
+                <div className="content-wrap">
+                    <Routes>
+                        {
+                            authStore.isAuthenticated() ?
+                                <>
+                                    <Route path="/" element={<HomePage />} />
+                                    <Route path="/login" element={<Auth />} />
+                                    <Route path="*" element={<NotFoundPage />} />
+                                </> : <Route path="*" element={<Auth />} />
+                        }
+                    </Routes>
+                </div>
+                <Footer />
+            </div>
         </Router>
     )
 }

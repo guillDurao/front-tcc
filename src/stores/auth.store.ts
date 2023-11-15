@@ -29,6 +29,6 @@ export class AuthStore {
     }
 
     isAuthenticated() {
-        return false;
+        return this.authenticated;
     }
 }
